@@ -1,22 +1,32 @@
 /* Global stuff */
 
 :root {
+  /* Colors */
   --bg: #293236;
   --green: #a6bf7f;
-  --greendim: #869a66;
-  --greenbright: #82c702;
-  --fgdim: #99907c;
+  --green-dim: #869a66;
+  --green-bright: #82c702;
   --fg: #b3a891;
-  --fgbright: #d1c5a9;
-  /* 2e383c */
-  /* 1d2326 */
+  --fg-dim: #99907c;
+  --fg-bright: #d1c5a9;
+  /* Transitions */
+  --transition-duration: 150ms;
 }
 
 body {
   /* background-color: var(--bg); */
   background-image: linear-gradient(to bottom right, #2e383c, #1d2326);
   background-attachment: fixed;
-  margin: 80px 60px;
+  margin: 80px auto;
+  padding: 0px 60px;
+  max-width: 1100px;
+}
+
+@media screen and (max-width: 30rem) {
+  body {
+    padding: 0px 20px;
+    margin: 30px auto;
+  }
 }
 
 * {
@@ -24,7 +34,6 @@ body {
   scroll-behavior: smooth;
   scroll-padding-top: 85px;
   font-family: "Roboto", "sans-serif";
-  transition-duration: 100ms;
   margin: 0px;
   padding: 0px;
 }
@@ -33,10 +42,11 @@ a {
   color: var(--green);
   text-decoration: none;
   font-weight: bold;
+  transition-duration: var(--transition-duration);
 }
 
 a:hover {
-  color: var(--greenbright);
+  color: var(--green-bright);
 }
 
 p {
@@ -44,16 +54,26 @@ p {
   text-align: justify;
 }
 
-/* Font awesome arrow */
+footer.footer-wide {
+  display: none;
+}
+
+/* Font awesome arrows */
 
 a .linkarrow {
   transform: rotate(-45deg);
   color: inherit;
   font-size: 0.95rem;
+  transition-duration: var(--transition-duration);
 }
 
 a:hover .linkarrow {
   transform: translate(4px, -4px) rotate(-45deg);
+}
+
+a .navarrow {
+  color: inherit;
+  font-size: 0.95rem;
 }
 
 /* Header */
@@ -65,12 +85,12 @@ header {
 header h1 {
   color: var(--green);
   font-size: 3rem;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 header h2 {
   font-weight: normal;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 header .social-media {
@@ -81,21 +101,92 @@ header .social-media {
 
 header .social-media i {
   font-size: 2rem;
+  transition-duration: var(--transition-duration);
 }
 
 header .social-media i:hover {
-  color: var(--greenbright);
+  color: var(--green-bright);
+}
+
+@media screen and (max-width: 30rem) {
+  header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  header h2 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  header .social-media i {
+    font-size: 1.6rem;
+  }
 }
 
 /* Navbar */
 
 nav {
-  /* display: none; */
+  display: none;
 }
 
 nav ul {
   list-style-type: none;
   padding: 0px;
+}
+
+nav ul li {
+  margin-bottom: 16px;
+  transition-duration: var(--transition-duration);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.95rem;
+}
+
+nav ul li .fab, nav ul li .fas {
+    font-size: 0.8rem;
+    margin-right: 6px;
+}
+
+nav ul li a {
+  color: var(--fg-dim);
+}
+
+nav ul li a:hover {
+  transform: translateX(3px);
+}
+
+/* Navbar and header on wide screens */
+
+@media screen and (min-width: 64rem) {
+  body {
+    display: flex;
+    column-gap: 80px;
+    margin: 80px auto 0px auto;
+  }
+  .global-left {
+    flex: 1;
+    position: sticky;
+    top: 80px;
+    bottom: 80px;
+    height: 80vh;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+  }
+  .global-right {
+    flex: 1;
+    display: inline;
+  }
+  nav {
+    display: inline;
+  }
+  footer.footer-narrow {
+    display: none;
+  }
+  footer.footer-wide {
+    display: inline;
+    /* position: sticky;
+    bottom: 80px; */
+  }
 }
 
 /* Sections */
@@ -106,18 +197,30 @@ section {
 
 section h3 {
   text-transform: uppercase;
-  color: var(--fgbright);
+  color: var(--fg-bright);
   letter-spacing: 2px;
   font-size: 1.05rem;
   margin-bottom: 20px;
+}
+
+@media screen and (min-width: 64rem) {
+  section h3[hidewhenwide] {
+    display: none;
+  }
 }
 
 /* Entries */
 
 div.entry {
   width: fit-content;
-  display: flex;
+  display: block;
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 48rem) {
+  div.entry {
+    display: flex;
+  }
 }
 
 div.entry-left {
@@ -129,7 +232,8 @@ div.entry-left {
 }
 
 div.entry-left p {
-  color: var(--fgdim);
+  color: var(--fg-dim);
+  margin-bottom: 16px;
 }
 
 div.entry-right {
@@ -153,7 +257,7 @@ div.entry h4 a {
 }
 
 div.entry h4 a:hover {
-  color: var(--greenbright);
+  color: var(--green-bright);
 }
 
 div.entry h5 {
@@ -170,16 +274,20 @@ ol.links {
   padding: 0;
   list-style-type: none;
   column-gap: 10px;
+  row-gap: 10px;
   margin: 16px 0px;
+  flex-wrap: wrap;
 }
 
-ol.links a {
-  color: var(--fgbright);
+ol.links a,
+ol.links a .fas {
+  color: var(--fg-bright);
+  transition-duration: var(--transition-duration);
 }
 
 ol.links a:hover,
 ol.links a:hover .fas {
-  color: var(--greenbright);
+  color: var(--green-bright);
 }
 
 /* Entries -- tags */
@@ -189,16 +297,38 @@ ol.tags {
   padding: 0;
   list-style-type: none;
   column-gap: 10px;
+  row-gap: 10px;
   margin: 16px 0px;
+  flex-wrap: wrap;
 }
 
 ol.tags li {
   border-radius: 3em;
-  background-color: var(--greendim);
+  background-color: var(--green-dim);
   color: var(--bg);
   display: inline;
   padding: 4px 12px 4px 12px;
   font-family: "Roboto Mono", "monospace";
   font-weight: bold;
   font-size: 0.9rem;
+}
+
+/* Debug */
+
+.screenwidth {
+  width: 50vw;
+  height: 1rem;
+  /* display: none; */
+}
+
+@media screen and (min-width: 48rem) {
+  .screenwidth {
+    background-color: skyblue;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  .screenwidth {
+    background-color: magenta;
+  }
 }

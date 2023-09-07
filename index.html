@@ -51,37 +51,79 @@
     <script type="text/javascript" src="http://livejs.com/live.js"></script>
   </head>
   <body>
-    <header>
-      <h1>Rijk de Wet</h1>
-      <h2>Junior Developer at <span class="company">Omni Calculator</span></h2>
-      <div class="social-media">
-        <a href="https://github.com/rijkdw"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/rijk-de-wet/"
-          ><i class="fab fa-linkedin"></i
-        ></a>
-        <a href="mailto:rijkdw1@gmail.com"><i class="fas fa-envelope"></i></a>
+    <!-- The left pane -->
+    <div class="global-left">
+      <div class="header-and-nav">
+        <header>
+          <h1>Rijk de Wet</h1>
+          <h2>
+            Junior Developer at <span class="company">Omni Calculator</span>
+          </h2>
+          <div class="social-media">
+            <a href="https://github.com/rijkdw"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/rijk-de-wet/"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="mailto:rijkdw1@gmail.com"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </div>
+        </header>
+
+        <nav>
+          <ul>
+            <li>
+              <a href="#about-me"
+                ><i class="fas fa-chevron-right navarrow"></i> About Me</a
+              >
+            </li>
+            <li>
+              <a href="#experience"
+                ><i class="fas fa-chevron-right navarrow"></i> Experience</a
+              >
+            </li>
+            <li>
+              <a href="#education"
+                ><i class="fas fa-chevron-right navarrow"></i> Education</a
+              >
+            </li>
+            <li>
+              <a href="#projects"
+                ><i class="fas fa-chevron-right navarrow"></i> Projects</a
+              >
+            </li>
+          </ul>
+        </nav>
       </div>
-    </header>
 
-    <nav>
-      <ul>
-        <li><a href="#about-me">About Me</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#projects">Projects</a></li>
-      </ul>
-    </nav>
+      <!-- Footer in wide layouts -->
+      <footer class="footer-wide">
+        <p>
+          This website was made from scratch with plain HTML and CSS. It uses
+          the
+          <a href="https://github.com/sainnhe/everforest" target="_blank"
+            >Everforest color scheme</a
+          >. It was inspired by
+          <a href="https://brittanychiang.com/" target="_blank"
+            >Brittany Chiang's website</a
+          >.
+        </p>
+      </footer>
+    </div>
 
-    <main>
+    <!-- The right pane -->
+    <main class="global-right">
       <!-- About -->
       <section id="about-me">
-        <h3>About Me</h3>
+        <h3 hidewhenwide>About Me</h3>
         <p>
-          Hi, I'm Rijk. I'm a junior developer. Armed with a master's degree, I
-          blend analytical thinking with creative coding to build websites and
-          tools that leave a lasting impact. I'm currently navigating the
-          exciting waters of web development at Omni Calculator. I'm driven by a
-          commitment to innovation and a dedication to honing my skills.
+          Hi, I'm Rijk, and I develop software. Armed with a master's degree, I
+          blend analytical thinking with creative coding to build tools that
+          leave a lasting impact. I'm currently navigating the exciting waters
+          of web development at Omni Calculator. I'm driven by a commitment to
+          innovation and a dedication to honing my skills.
         </p>
         <br />
         <p>
@@ -213,45 +255,47 @@
           </div>
         </div>
       </section>
+      <!-- Projects -->
+      <section id="projects">
+        <h3>Projects</h3>
+        <div class="entry">
+          <div class="entry-left"><p>March 2023</p></div>
+          <div class="entry-right">
+            <h4>
+              <a href="https://www.omnicalculator.com/" target="_blank">
+                Set-based Particle Swarm Optimization for Data Clustering
+                <i class="fas fa-arrow-right linkarrow"></i>
+              </a>
+            </h4>
+            <h5>Comparison and Analysis of Control Parameters</h5>
+            <p>
+              A journal article in the proceedings of ISMSI 2023 detailing the
+              capstone project of my master's degree. Applied a novel adaptation
+              of the classical particle swarm optimization to the problem of
+              data clustering. Implemented the algorithm from scratch, performed
+              hundreds of experiments to tune algorithm hyperparameters, and
+              used statistical tests to interpret the results.
+            </p>
+            <ol class="tags">
+              <li>Python</li>
+              <li>Bash</li>
+              <li>LaTeX</li>
+            </ol>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!-- Projects -->
-    <section id="projects">
-      <h3>Projects</h3>
-      <div class="entry">
-        <div class="entry-left"><p>March 2023</p></div>
-        <div class="entry-right">
-          <h4>
-            <a href="https://www.omnicalculator.com/" target="_blank">
-              Set-based Particle Swarm Optimization for Data Clustering
-              <i class="fas fa-arrow-right linkarrow"></i>
-            </a>
-          </h4>
-          <h5>Comparison and Analysis of Control Parameters</h5>
-          <p>
-            A journal article in the proceedings of ISMSI 2023 detailing the
-            capstone project of my master's degree. Applied a novel adaptation
-            of the classical particle swarm optimization to the problem of data
-            clustering. Implemented the algorithm from scratch, performed
-            hundreds of experiments to tune algorithm hyperparameters, and used
-            statistical tests to interpret the results.
-          </p>
-          <ol class="tags">
-            <li>Python</li>
-            <li>Bash</li>
-            <li>LaTeX</li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <footer>
+    <!-- Footer in narrow layouts -->
+    <footer class="footer-narrow">
       <p>
         This website was made from scratch with plain HTML and CSS. It uses the
-        <a href="https://github.com/sainnhe/everforest"
+        <a href="https://github.com/sainnhe/everforest" target="_blank"
           >Everforest color scheme</a
         >. It was inspired by
-        <a href="https://brittanychiang.com/">Brittany Chiang's website</a>.
+        <a href="https://brittanychiang.com/" target="_blank"
+          >Brittany Chiang's website</a
+        >.
       </p>
     </footer>
   </body>
