@@ -14,7 +14,6 @@
 }
 
 body {
-  /* background-color: var(--bg); */
   background-image: linear-gradient(to bottom right, #2e383c, #1d2326);
   background-attachment: fixed;
   margin: 80px auto;
@@ -54,10 +53,6 @@ p {
   text-align: justify;
 }
 
-footer.footer-wide {
-  display: none;
-}
-
 /* Font awesome arrows */
 
 a .linkarrow {
@@ -91,6 +86,13 @@ header h1 {
 header h2 {
   font-weight: normal;
   margin-bottom: 20px;
+  color: var(--fg-dim);
+}
+
+header h2 .position,
+header h2 .company {
+  color: var(--fg);
+  font-weight: 500;
 }
 
 header .social-media {
@@ -141,9 +143,10 @@ nav ul li {
   font-size: 0.95rem;
 }
 
-nav ul li .fab, nav ul li .fas {
-    font-size: 0.8rem;
-    margin-right: 6px;
+nav ul li .fab,
+nav ul li .fas {
+  font-size: 0.8rem;
+  margin-right: 6px;
 }
 
 nav ul li a {
@@ -154,7 +157,17 @@ nav ul li a:hover {
   transform: translateX(3px);
 }
 
-/* Navbar and header on wide screens */
+/* Footer */
+
+footer.footer-wide {
+  display: none;
+}
+
+footer p {
+  color: var(--fg-dim);
+}
+
+/* Navbar, header, and on wide screens */
 
 @media screen and (min-width: 64rem) {
   body {
@@ -184,8 +197,6 @@ nav ul li a:hover {
   }
   footer.footer-wide {
     display: inline;
-    /* position: sticky;
-    bottom: 80px; */
   }
 }
 
@@ -233,7 +244,7 @@ div.entry-left {
 
 div.entry-left p {
   color: var(--fg-dim);
-  margin-bottom: 16px;
+  margin-bottom: 6px;
 }
 
 div.entry-right {
@@ -262,7 +273,7 @@ div.entry h4 a:hover {
 
 div.entry h5 {
   font-size: 1.1rem;
-  color: var(--fg) !important;
+  color: var(--fg-dim) !important;
   font-weight: normal;
   margin-bottom: 12px;
 }
@@ -273,7 +284,7 @@ ol.links {
   display: flex;
   padding: 0;
   list-style-type: none;
-  column-gap: 10px;
+  column-gap: 16px;
   row-gap: 10px;
   margin: 16px 0px;
   flex-wrap: wrap;
@@ -311,6 +322,12 @@ ol.tags li {
   font-family: "Roboto Mono", "monospace";
   font-weight: bold;
   font-size: 0.9rem;
+}
+
+@media screen and (max-width: 30rem) {
+  ol.tags li {
+    font-size: 0.9rem;
+  }
 }
 
 /* Debug */
