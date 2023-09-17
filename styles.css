@@ -5,7 +5,7 @@
   --bg: #293236;
   --green: #a6bf7f;
   --green-dim: #869a66;
-  --green-bright: #82c702;
+  --green-bright: #91bf47;
   --fg: #b3a891;
   --fg-dim: #99907c;
   --fg-bright: #d1c5a9;
@@ -18,7 +18,7 @@ body {
   background-attachment: fixed;
   margin: 80px auto;
   padding: 0px 60px;
-  max-width: 1100px;
+  max-width: 1000px;
 }
 
 @media screen and (max-width: 30rem) {
@@ -89,8 +89,7 @@ header h2 {
   color: var(--fg-dim);
 }
 
-header h2 .position,
-header h2 .company {
+header h2 strong {
   color: var(--fg);
   font-weight: 500;
 }
@@ -161,6 +160,7 @@ nav ul li a:hover {
 
 footer.footer-wide {
   display: none;
+  width: 80%;
 }
 
 footer p {
@@ -236,7 +236,7 @@ div.entry {
 
 div.entry-left {
   display: inline;
-  flex: 1;
+  flex: 2;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.95rem;
@@ -249,7 +249,7 @@ div.entry-left p {
 
 div.entry-right {
   display: inline;
-  flex: 3;
+  flex: 5;
 }
 
 div.entry-right p {
