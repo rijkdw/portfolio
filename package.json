@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "python -m http.server"
+    "start": "python -m http.server",
+    "package": "./scripts/package.sh"
   },
   "author": "",
   "license": "ISC"

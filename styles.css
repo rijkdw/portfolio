@@ -1,5 +1,9 @@
 /* Global stuff */
 
+html {
+  overscroll-behavior-y: none;
+}
+
 :root {
   /* Colors */
   --bg: #293236;
@@ -20,6 +24,7 @@ body {
   margin: 5rem auto;
   padding: 0 4rem;
   max-width: 1000px;
+  overscroll-behavior-y: none;
 }
 
 @media screen and (max-width: 480px) {
