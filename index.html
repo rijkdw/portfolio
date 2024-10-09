@@ -12,7 +12,7 @@
       property="og:description"
       content="Rijk de Wet's personal portfolio page."
     />
-    <meta property="og:image" content="/public/rijk_mugshot.JPG" />
+    <meta property="og:image" content="/public/images/rijk-mugshot.jpg" />
     <meta property="twitter:title" content="Rijk de Wet's portfolio" />
     <!-- Icons -->
     <link rel="icon" type="image/x-icon" href="/public/favicon.ico" />
@@ -85,13 +85,13 @@
               >
             </li>
             <li>
-              <a href="#education"
-                ><i class="fas fa-chevron-right navarrow"></i> Education</a
+              <a href="#projects"
+                ><i class="fas fa-chevron-right navarrow"></i> Projects</a
               >
             </li>
             <li>
-              <a href="#projects"
-                ><i class="fas fa-chevron-right navarrow"></i> Projects</a
+              <a href="#education"
+                ><i class="fas fa-chevron-right navarrow"></i> Education</a
               >
             </li>
           </ul>
@@ -99,7 +99,7 @@
       </div>
 
       <!-- Footer in wide layouts -->
-      <footer class="footer-wide">
+      <footer class="wide">
         <p>
           This page was made from scratch with plain HTML and CSS. It was
           inspired by
@@ -141,7 +141,7 @@
 
         <div class="entry" id="developer-omni">
           <div class="entry-left">
-            <p>2021 &ndash; now</p>
+            <p>2023 &ndash; now</p>
           </div>
           <div class="entry-right">
             <h4>
@@ -150,21 +150,20 @@
                 <i class="fas fa-arrow-right linkarrow"></i>
               </a>
             </h4>
-            <h5>+ Content Writer + Reviewer</h5>
+            <h5>2021 &ndash; 2023 Content Writer & Reviewer</h5>
             <p>
-              Omni Calculator brings you 3,500 custom-built calculators that
-              each solves a tiny but important real-life problem shared by
-              millions of people across the globe. I began at Omni as a content
-              creator and soon became a trusted reviewer. Below, you can find
-              some of the calculators I made at Omni.
+              Omni Calculator brings you 3,500 custom-built calculators for
+              every-day problems. At Omni calculator, I've been involved in
+              various projects, such as our custom-built algebraic equation
+              solver powering our calculators, as well as with other in-house
+              products and tools.
             </p>
             <p>
-              After completing my studies, I transferred to the website's
-              development team in May 2023. I've since been involved in various
-              projects, most notably with our custom-built algebraic equation
-              solver that powers our calculators, as well as with other in-house
-              products.
+              I began at Omni as a content creator and soon became a trusted
+              reviewer. Below, you can find some of the calculators I made at
+              Omni.
             </p>
+
             <ol class="links">
               <li>
                 <a
@@ -201,6 +200,105 @@
               <li>React</li>
               <li>Python</li>
               <li>GraphQL</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects">
+        <h3>Projects</h3>
+
+        <div class="entry project" id="scores2duo">
+          <div class="entry-left">
+            <a href="https://scores2duo.co.za" target="_blank">
+              <img src="public/images/projects/scores2duo.png" />
+            </a>
+          </div>
+          <div class="entry-right">
+            <h4>
+              <a href="https://scores2duo.co.za" target="_blank">
+                ScoreS2Duo website
+                <i class="fas fa-arrow-right linkarrow"></i>
+              </a>
+            </h4>
+            <p>
+              A homepage for a local music studio built using Astro. The site
+              provides profile pages for students, updates on upcoming events
+              and studio-related news, and a catalogue of in-house products.
+            </p>
+            <ol class="tags">
+              <li>Astro</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="entry project" id="wordle">
+          <div class="entry-left">
+            <a href="https://rijkdewet.co.za/wordle" target="_blank">
+              <img src="public/images/projects/fake-wordle.png" />
+            </a>
+          </div>
+          <div class="entry-right">
+            <h4>
+              <a href="https://rijkdewet.co.za/wordle" target="_blank">
+                Fake Wordle
+                <i class="fas fa-arrow-right linkarrow"></i>
+              </a>
+            </h4>
+            <p>
+              A virtually indistinguishable clone of the New York Times' hit
+              web-game. Built from scratch using vanilla HTML, CSS, and
+              TypeScript. Uses the MVC pattern.
+            </p>
+            <ol class="links">
+              <li>
+                <a href="https://github.com/rijkdw/wordle-js" target="_blank"
+                  ><i class="fab fa-github"></i> Repository</a
+                >
+              </li>
+            </ol>
+            <ol class="tags">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>TypeScript</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="entry project" id="sbpso-ismsi-paper">
+          <div class="entry-left">
+            <a
+              href="https://dl.acm.org/doi/10.1145/3596947.3596956"
+              target="_blank"
+            >
+              <img src="public/images/projects/sbpso.png" />
+            </a>
+          </div>
+          <div class="entry-right">
+            <h4>
+              <a
+                href="https://dl.acm.org/doi/10.1145/3596947.3596956"
+                target="_blank"
+              >
+                Set-based Particle Swarm Optimization for Data Clustering
+                <i class="fas fa-arrow-right linkarrow"></i>
+              </a>
+            </h4>
+            <p>
+              A journal article in the proceedings of ISMSI 2023 detailing the
+              capstone project of my <a href="#masters">master's degree</a>.
+              Applied a novel adaptation of the classical particle swarm
+              optimization to the problem of data clustering. Implemented the
+              algorithm from scratch, performed hundreds of experiments to tune
+              algorithm hyperparameters, and used statistical tests to interpret
+              the results.
+            </p>
+            <ol class="tags">
+              <li>Python</li>
+              <li>ScikitLearn</li>
+              <li>Bash</li>
+              <li>LaTeX</li>
             </ol>
           </div>
         </div>
@@ -252,8 +350,8 @@
             <h5>Electronic Engineering (Informatics)</h5>
             <p>
               Learnt of high-level computer science and software systems such as
-              Internet communication, virtual storage, web development, machine
-              learning, and hardware and software design.
+              Internet communication, web development, machine learning, and
+              design of both hardware and software.
             </p>
             <ol class="tags">
               <li>C</li>
@@ -266,105 +364,10 @@
           </div>
         </div>
       </section>
-      <!-- Projects -->
-      <section id="projects">
-        <h3>Projects</h3>
-
-        <div class="entry" id="sbpso-ismsi-paper">
-          <div class="entry-left">
-            <a href="https://dl.acm.org/doi/10.1145/3596947.3596956">
-              <img src="public/images/projects/sbpso.png" />
-            </a>
-          </div>
-          <div class="entry-right">
-            <h4>
-              <a
-                href="https://dl.acm.org/doi/10.1145/3596947.3596956"
-                target="_blank"
-              >
-                Set-based Particle Swarm Optimization for Data Clustering
-                <i class="fas fa-arrow-right linkarrow"></i>
-              </a>
-            </h4>
-            <p>
-              A journal article in the proceedings of ISMSI 2023 detailing the
-              capstone project of my <a href="#masters">master's degree</a>.
-              Applied a novel adaptation of the classical particle swarm
-              optimization to the problem of data clustering. Implemented the
-              algorithm from scratch, performed hundreds of experiments to tune
-              algorithm hyperparameters, and used statistical tests to interpret
-              the results.
-            </p>
-            <ol class="tags">
-              <li>Python</li>
-              <li>ScikitLearn</li>
-              <li>Bash</li>
-              <li>LaTeX</li>
-            </ol>
-          </div>
-        </div>
-
-        <div class="entry" id="scores2duo">
-          <div class="entry-left">
-            <a href="https://scores2duo.co.za">
-              <img src="public/images/projects/scores2duo.png" />
-            </a>
-          </div>
-          <div class="entry-right">
-            <h4>
-              <a href="https://scores2duo.co.za" target="_blank">
-                ScoreS2Duo website
-                <i class="fas fa-arrow-right linkarrow"></i>
-              </a>
-            </h4>
-            <p>
-              A homepage for a local music studio built using Astro. The site
-              provides profile pages for students, updates on upcoming events
-              and studio-related news, and a catalogue of in-house products.
-            </p>
-            <ol class="tags">
-              <li>Astro</li>
-            </ol>
-          </div>
-        </div>
-
-        <div class="entry" id="wordle">
-          <div class="entry-left">
-            <a href="https://rijkdewet.co.za/wordle">
-              <img src="public/images/projects/fake-wordle.png" />
-            </a>
-          </div>
-          <div class="entry-right">
-            <h4>
-              <a href="https://rijkdewet.co.za/wordle" target="_blank">
-                Fake Wordle
-                <i class="fas fa-arrow-right linkarrow"></i>
-              </a>
-            </h4>
-            <p>
-              A virtually indistinguishable clone of the New York Times' hit
-              web-game. Built from scratch using vanilla HTML, CSS, and
-              TypeScript. Uses the MVC pattern.
-            </p>
-            <ol class="links">
-              <li>
-                <a href="https://github.com/rijkdw/wordle-js" target="_blank"
-                  ><i class="fab fa-github"></i> Repository</a
-                >
-              </li>
-            </ol>
-            <ol class="tags">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>TypeScript</li>
-            </ol>
-          </div>
-        </div>
-      </section>
     </main>
 
     <!-- Footer in narrow layouts -->
-    <footer class="footer-narrow">
+    <footer class="narrow">
       <p>
         This page was made from scratch with plain HTML and CSS. It was inspired
         by
